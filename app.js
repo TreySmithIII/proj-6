@@ -1,6 +1,6 @@
 const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
-const phraseUl = document.querySelectorAll('ul');
+const phraseUl = phrase.querySelector('ul');
 
 const startButton = document.querySelector('.btn__reset');
 const overlay = document.getElementById('overlay');
@@ -30,7 +30,7 @@ for (var i=0; i<arr.length; i++) {
 };
 
 function addPhrasetoDisplay (arr) {
-    for (let i = 0; phrases.length; ++i) {
+    for (let i = 0; i < arr.length; i++) {
         let li = document.createElement('li');
         return phraseUl.appendChild(li);
     }
