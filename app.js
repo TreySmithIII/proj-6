@@ -1,12 +1,16 @@
 const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const phraseUl = document.querySelectorAll('ul');
+
 const startButton = document.querySelector('.btn__reset');
 const overlay = document.getElementById('overlay');
 const main = document.querySelector('.title');
 const header = document.querySelector('.header');
+
 let letter = className ='letter';
+
 const missed = 0; 
+
 
 startButton.addEventListener('click' ,  () => {
     overlay.style.visibility = 'hidden';
@@ -28,7 +32,7 @@ for (var i=0; i<arr.length; i++) {
 function addPhrasetoDisplay (arr) {
     for (let i = 0; phrases.length; ++i) {
         let li = document.createElement('li');
-        phraseUl.appendChild(li);
+        return phraseUl.appendChild(li);
     }
 
     }
