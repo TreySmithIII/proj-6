@@ -67,14 +67,14 @@ function addPhrasetoDisplay (arr) {
 function checkWin () {
 let letters = document.getElementsByClassName('letter');
 let shown = document.getElementsByClassName('shown');
-if (shown.length == letters.length) {
+if (letters.length == shown.length) {
   overlay.className = 'win';
-  headline.textContent='You Won !';
-  overlay.style.visibility = "visible";
+  headline.textContent='You Won!';
+   overlay.style.visibility = "visible";
 startButton.textContent= 'try again';
 }else if(missed >=5) {
   overlay.className = 'lose';
-  header.textContent="You Lose";
+  headline.textContent="You Lose";
   overlay.style.visibility = "visible";
 
   startButton.textContent='Try again';
