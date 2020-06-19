@@ -65,9 +65,9 @@ function addPhrasetoDisplay (arr) {
 
 
 function checkWin () {
-let letters = document.getElementsByClassName('letters')
+let letters = document.getElementsByClassName('letter');
 let shown = document.getElementsByClassName('shown');
-if (letters.length == shown.length) {
+if (shown.length == letters.length) {
   overlay.className = 'win';
   headline.textContent='You Won !';
   overlay.style.visibility = "visible";
@@ -75,6 +75,8 @@ startButton.textContent= 'try again';
 }else if(missed >=5) {
   overlay.className = 'lose';
   header.textContent="You Lose";
+  overlay.style.visibility = "visible";
+
   startButton.textContent='Try again';
 
 }
@@ -98,6 +100,7 @@ function resetGame() {
 startButton.addEventListener('click' ,  () => {
   overlay.style.visibility = 'hidden';
   resetGame();
+  header.textContent="Wheel of success";
   const newPhrase = getRandomPhraseAsArray(phrases);
   addPhrasetoDisplay(newPhrase);
 });
