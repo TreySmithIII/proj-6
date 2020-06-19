@@ -66,8 +66,8 @@ function addPhrasetoDisplay (arr) {
 
 function checkWin () {
 let letters = document.getElementsByClassName('letter');
-let shown = document.getElementsByClassName('shown');
-if (letters.length == shown.length) {
+let shown = document.getElementsByClassName('show');
+if (shown.length == letters.length) {
   overlay.className = 'win';
   headline.textContent='You Won!';
    overlay.style.visibility = "visible";
